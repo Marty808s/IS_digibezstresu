@@ -1,0 +1,20 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+// příkazy
+// npx prisma generate - přečte schema.prisma - udělá klienta (tsx kód), který následně používám
+// npx prisma migrate dev - udělám migraci + generuje klienta
+// npx prisma db push (synchronizace db bez migrací)
+
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
